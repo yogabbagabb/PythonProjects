@@ -1,0 +1,8 @@
+S'shoe'
+p0
+.S'giraffe'
+p0
+.S'chickenn'
+p0
+.I4
+.
