@@ -13,7 +13,7 @@ from random import Random
 class Player():
     
     #class variables
-    moveA = [MoveEntry(move="Scratch", points=-30), MoveEntry(move="Chew", points = -3)]
+    moveA = ["Scratch", "Chew"]
     moveB = ["Jump", "Scream", "Howl", "Be"]
     moveC = ["Burp", "Chew", "Spit", "Crawl"]
     moveD = ["Scratch", "Chew", "Spit", "Crawl"]
