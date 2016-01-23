@@ -22,9 +22,12 @@ def makeCoefficients(a, x):
         for i in range(k, length):
             a[i] = (a[i] - a[k-1])/(x[i] - x[k-1])
     
-def returnPol(x, func, xD):
+def returnPol(x, func, xD, y = None):
     
-    a = [func(x[i]) for i in range (len(x))]
+    if y == None:
+        a = [func(x[i]) for i in range (len(x))]
+    else:
+        a = y.copy()
     makeCoefficients(a, x)
     
     polDegree = len(x) - 1
