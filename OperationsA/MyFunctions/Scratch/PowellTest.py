@@ -5,6 +5,7 @@ Created on Jan 16, 2016
 '''
 
 from OperationsA.MyFunctions.Powell import powell
+import scipy.optimize as sp
 
 if __name__ == '__main__':
     pass
@@ -19,3 +20,5 @@ if __name__ == '__main__':
     dimensions = 2
     startingPoint = [-1, 1]
     print(powell(1, a, startingPoint, testFunction, dimensions))
+    z = sp.minimize(testFunction, startingPoint, (), 'Powell')
+    print(z.x)
