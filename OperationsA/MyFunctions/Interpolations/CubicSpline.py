@@ -47,7 +47,7 @@ def cubeSpline(xData, yData, k, x):
     
     while (j - i > 1):
         mid = int((i + j)/2)
-        if (xData[i] < xData[mid]):
+        if (x > xData[mid]):
             i = mid
         else:
             j = mid
@@ -62,8 +62,8 @@ def cubeSpline(xData, yData, k, x):
 
 
 if __name__ == '__main__':
-    x = [0,1,2,3,4,5,6,7]
-    y = [1,3,4,5,6,7,53,3]
+    x = [1.0,2.0,3.0,4.0,5.0]
+    y = [0.0,1.0,0.0,1.0,0.0]
     k = getK(x, y)
-    a = cubeSpline(x, y, k, 1)
+    a = cubeSpline(x, y, k, 1.5)
     print(a)
